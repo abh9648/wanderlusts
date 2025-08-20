@@ -1,0 +1,221 @@
+body{
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+      font-optical-sizing: auto !important;
+      font-weight: weight !important;
+      font-style: normal !important;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;   
+}
+.container{
+    flex: 1;
+}
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links ,.f-info-socials,.f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #F7F7F7;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+
+}
+.short-hr {
+    width: 93%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #575757;
+}
+.f-ins{
+    background-color: #F7F7F7;
+}
+.f-yadik h3{
+    font-size: 1.4rem;
+}
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body {
+    text-decoration: none !important;
+    padding: 0 !important;
+}
+.listing_link{
+    text-decoration: none;
+}
+/* Cards effects */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* Edit Page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/* Show pages  */
+.show-img{
+    height:30vh;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+.f-uni {
+    font-size: 0.9rem;
+}
+/* date-26june */
+.footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* This creates consistent spacing between links */
+        margin-top: 15px;
+    }
+    
+    .footer-link {
+        color: #495057; /* Dark gray color */
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .footer-link:hover {
+        color: #0d6efd; /* Blue color on hover */
+    }
+    
+    .f-uni b p {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        color: #212529;
+    }
+    /*  */
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .footer-link {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+    }
+    
+    .footer-link:hover {
+        color: #FF385C; /* Airbnb's pink color for hover */
+    }
+    
+    .footer-link-title {
+        color: #212529;
+        font-weight: bold;
+        font-size: 0.95rem;
+    }
+    
+    .footer-link-location {
+        color: #717171;
+        font-size: 0.85rem;
+    }
+    
+    .f-uni {
+        margin-bottom: 30px;
+    }
+     .footer-section-heading {
+        color: #212529;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    
+    .footer-subsection {
+        margin-bottom: 1rem;
+    }
+    
+    .footer-subsection-title {
+        color: #212529;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-divider {
+        border-top: 1px solid #d6d4d4;
+        margin: 1.3rem 0 1rem;
+        width: 100%;
+        opacity: 1;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .footer-divider {
+            margin: 0.3rem 0;
+        }
+    }
+    
+    /* These styles match the previous components */
+    .px-5 {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+    
+    .mt-3 {
+        margin-top: 1rem !important;
+    }
+    
+    .mt-4 {
+        margin-top: 1.5rem !important;
+    }
+/* map */
