@@ -19,16 +19,30 @@ const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 const dbUrl =process.env.ATLASDB_URL;
 
-main().then(() => {
-    console.log("connected to DB");
-})
-    .catch((err) => {
-        console.log(err);
-    });
+// main().then(() => {
+//     console.log("connected to DB");
+// })
+//     .catch((err) => {
+//         console.log(err);
+//     });
 
+// async function main() {
+//     await mongoose.connect(dbUrl);
+// }
 async function main() {
-    await mongoose.connect(dbUrl);
+    try {
+        await mongoose.connect(dbUrl, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            tls: true  // ensure SSL works with Node 20+
+        });
+        console.log("Connected to MongoDB Atlas");
+    } catch (err) {
+        console.error("MongoDB connection error:", err);
+    }
 }
+main();
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
@@ -67,10 +81,16 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// app.use((req, res, next) => {
+//     res.locals.success = req.flash("success");
+//     res.locals.error = req.flash("error");
+//     res.locals.currUser = req.user;
+//     next();
+// });
 app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
-    res.locals.currUser = req.user;
+    res.locals.currUser = req.user || null;   // ensure it's never undefined
     next();
 });
 
