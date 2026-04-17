@@ -64,7 +64,7 @@ const sessionOption = {
     store,
     secret: process.env.SECRET || "bettersecret",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized:true,
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
