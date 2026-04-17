@@ -40,6 +40,7 @@ main();
 // --- App Config ---
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("trust proxy", 1);
 app.engine("ejs", ejsMate);
 
 app.use(express.urlencoded({ extended: true }));
@@ -63,11 +64,12 @@ const sessionOption = {
     store,
     secret: process.env.SECRET || "bettersecret",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: {
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
     },
 };
 
